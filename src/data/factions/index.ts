@@ -7,11 +7,11 @@ import { triglavian } from "./triglavians";
 import { vigilantTyrannos } from "./vigilantTyrannos";
 
 export const factions = {
-  angel,
-  concordEdencom,
-  rogueDrones,
-  sansha,
-  sleepers,
   triglavian,
+  rogueDrones,
+  concordEdencom,
   vigilantTyrannos,
+  sleepers,
+  angel,
+  sansha,
 };

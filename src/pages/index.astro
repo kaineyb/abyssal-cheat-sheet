@@ -18,8 +18,12 @@ import { factions } from "../data/factions";
     display: flex;
     /* flex-wrap: wrap; */
     gap: 20px;
-    border: 1px solid blue;
-    width: 100%;
-    flex-basis: 200px;
+    /* border: 1px solid blue; */
+    /* flex-wrap: wrap; */
+
+    > div {
+      flex: 1 1 100px;
+      border: 1px solid red;
+    }
   }
 </style>
