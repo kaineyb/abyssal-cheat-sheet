@@ -1,0 +1,35 @@
+---
+import { type Faction } from "../data/_base";
+import Prefixes from "./Prefixes.astro";
+import Ships from "./Ships.astro";
+import Icon from "./Icon.astro";
+
+interface Props {
+  faction: Faction;
+}
+
+const { faction } = Astro.props;
+---
+
+<div class="container">
+  <h1 class="faction-name">{faction.name}</h1>
+  <div class="icon-group">
+    {faction.types.map((type) => <Icon icon={type} />)}
+  </div>
+  <p><Prefixes prefixes={faction.prefixes} /></p>
+  <p><Ships ships={faction.ships} /></p>
+  <p>{faction.notes}</p>
+</div>
+
+<style scoped>
+  .container {
+    border: 1px solid red;
+    /* width: 200px; */
+  }
+
+  .icon-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+</style>

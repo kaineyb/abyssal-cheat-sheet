@@ -1,11 +1,25 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Faction from "../components/Faction.astro";
+import Layout from "../layouts/Layout.astro";
+import { factions } from "../data/factions";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <div class="faction-container">
+    {Object.values(factions).map((faction) => <Faction faction={faction} />)}
+  </div>
 </Layout>
+
+<style>
+  .faction-container {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    border: 1px solid blue;
+    width: 100%;
+    flex-basis: 200px;
+  }
+</style>

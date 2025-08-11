@@ -1,0 +1,34 @@
+---
+import { type Ship } from "../data/_base";
+import ShipIcon from "./ShipIcon.astro";
+import Icon from "./Icon.astro";
+
+interface Props {
+  ships: Ship[];
+}
+
+const { ships } = Astro.props;
+---
+
+<div id="container">
+  <h2>Ships</h2>
+  <ul class="ships">
+    {
+      ships.map((ship) => (
+        <li class="ship">
+          {ship.name}
+          <>
+            <ShipIcon shipClass={ship.class} />
+            <span class="faction-type">
+              {ship.icons.map((type) => (
+                <Icon icon={type} />
+              ))}
+            </span>
+          </>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style></style>

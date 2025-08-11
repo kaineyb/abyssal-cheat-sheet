@@ -1,0 +1,24 @@
+---
+import { type Icons } from "../data/_base";
+import { getIcon } from "../data/icons";
+
+interface Props {
+  icon: Icons;
+}
+
+const { icon } = Astro.props;
+---
+
+<img
+  title={icon}
+  width="32px"
+  height="32px"
+  src={getIcon(icon)}
+  alt={icon}
+/>
+
+<style scoped>
+  .faction-type {
+    /* border: 1px solid black; */
+  }
+</style>

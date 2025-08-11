@@ -1,0 +1,25 @@
+---
+import { type Class, type Icons } from "../data/_base";
+import { getShipIcon } from "../data/icons";
+
+interface Props {
+  shipClass: Class;
+}
+
+const { shipClass } = Astro.props;
+---
+
+<img
+  title={shipClass}
+  width="32px"
+  height="32px"
+  src={getShipIcon(shipClass)}
+  alt={shipClass}
+/>
+
+<style scoped>
+  img {
+    border: 1px solid black;
+    filter: invert(1);
+  }
+</style>

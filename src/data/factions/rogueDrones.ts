@@ -1,4 +1,4 @@
-import type { Faction } from "./_base";
+import type { Faction } from "../_base";
 
 export const rogueDrones: Faction = {
   name: "Rogue Drones",

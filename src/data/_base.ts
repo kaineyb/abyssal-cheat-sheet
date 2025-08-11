@@ -9,8 +9,7 @@ type ElectronicWarFare =
   | "TP"
   | "Neaut"
   | "NOS"
-  | "Web"
-  | "Grappler";
+  | "Web";
 
 type DangerIcons = "HighDPS" | "KeepAtRange";
 
@@ -106,4 +105,8 @@ export type Boost = {
   name: string;
   icon: string;
   modifiers: string[];
+};
+
+export type IconToFile = {
+  [key in Icons]: string;
 };

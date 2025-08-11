@@ -1,0 +1,30 @@
+---
+import { type Prefix } from "../data/_base";
+import Icon from "./Icon.astro";
+
+interface Props {
+  prefixes: Prefix[];
+}
+
+const { prefixes } = Astro.props;
+---
+
+<div id="container">
+  <h2>Prefixes</h2>
+  <ul class="prefixes">
+    {
+      prefixes.map((prefix) => (
+        <li class="prefix">
+          {prefix.name}
+          <span class="faction-type">
+            {prefix.icon.map((type) => (
+              <Icon icon={type} />
+            ))}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style></style>

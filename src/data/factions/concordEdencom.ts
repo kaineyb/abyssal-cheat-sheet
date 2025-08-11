@@ -1,4 +1,4 @@
-import type { Faction } from "./_base";
+import type { Faction } from "../_base";
 
 export const concordEdencom: Faction = {
   name: "Concord Edencom",
@@ -7,7 +7,7 @@ export const concordEdencom: Faction = {
     { name: "Arrester", icon: ["Explosive", "Web"] },
     { name: "Marker", icon: ["Thermal", "TP"] },
     { name: "Drainer", icon: ["Thermal", "Explosive", "Neaut"] },
-    { name: "Assault/Attacked", icon: ["Thermal"] },
+    { name: "Assault/Attacker", icon: ["Thermal"] },
   ],
   ships: [
     { name: "Pacifier", class: "Frigate", icons: [] },
