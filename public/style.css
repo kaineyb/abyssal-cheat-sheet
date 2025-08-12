@@ -1,0 +1,13 @@
+* {
+  font-weight: lighter;
+}
+h1 {
+  margin: 0;
+}
+html {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+  background-color: black;
+  color: white;
+  font-size: 22px;
+}

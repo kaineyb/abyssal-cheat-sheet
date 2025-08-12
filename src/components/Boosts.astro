@@ -1,0 +1,64 @@
+---
+import { boosts } from "../data/boosts";
+---
+
+<div class="container">
+  <div class="boosts-container">
+    {
+      Object.values(boosts).map((boost) => (
+        <div class="boost">
+          <img
+            class="icon"
+            src={`/icons/${boost.icon}.png`}
+            alt={boost.name}
+          />
+          <ul>
+            {boost.modifiers.map((modifier) => (
+              <li>{modifier}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style scoped>
+  .boost {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    gap: 15px;
+    & > * {
+      /* border: 1px solid #eee; */
+    }
+  }
+
+  img.icon {
+    width: 32px;
+    height: 32px;
+    /* background-color: green; */
+  }
+  .container {
+    /* border: 1px solid red; */
+    /* width: 100%; */
+    /* width: 200px; */
+  }
+
+  .icon-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+
+  .boosts-container ul {
+    margin: 0;
+    padding-top: 0;
+    list-style: none;
+    padding-left: 0;
+    /* border: 1px solid green; */
+  }
+</style>

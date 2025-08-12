@@ -3,17 +3,17 @@ import { type Boost } from "./_base.ts";
 export const boosts: Boost[] = [
   {
     name: "",
-    icon: "Fire",
+    icon: "FireBoost",
     modifiers: ["Shield Boost Strength -40%", "Shield Boost Duration -40%"],
   },
   {
     name: "",
-    icon: "Blue",
+    icon: "BlueBoost",
     modifiers: ["Signature Radius + 300% (x4)"],
   },
   {
     name: "",
-    icon: "Green",
+    icon: "GreenBoost",
     modifiers: ["Velocity + 300%", "Inertia Modifier -50%"],
   },
   {

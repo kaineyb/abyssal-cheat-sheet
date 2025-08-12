@@ -1,29 +1,53 @@
 ---
 import Faction from "../components/Faction.astro";
 import Layout from "../layouts/Layout.astro";
+import Boosts from "../components/Boosts.astro";
 import { factions } from "../data/factions";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../../public/style.css";
+
+const {
+  triglavian,
+  rogueDrones,
+  concordEdencom,
+  vigilantTyrannos,
+  sleepers,
+  angel,
+  sansha,
+} = factions;
 ---
 
 <Layout>
-  <div class="faction-container">
-    {Object.values(factions).map((faction) => <Faction faction={faction} />)}
+  <div class="container">
+    <div class="top">
+      <Faction faction={triglavian} />
+      <Faction faction={rogueDrones} />
+      <Faction faction={concordEdencom} />
+      <Boosts />
+    </div>
+    <div class="bottom">
+      <Faction faction={vigilantTyrannos} />
+      <Faction faction={sleepers} />
+      <Faction faction={angel} />
+      <Faction faction={sansha} />
+    </div>
   </div>
 </Layout>
 
 <style>
-  .faction-container {
-    display: flex;
-    /* flex-wrap: wrap; */
-    gap: 20px;
-    /* border: 1px solid blue; */
-    /* flex-wrap: wrap; */
+  .container {
+    width: calc(97dvw);
+  }
 
-    > div {
-      flex: 1 1 100px;
-      border: 1px solid red;
+  .top,
+  .bottom {
+    outline: 1px solid white;
+    display: flex;
+
+    > * {
+      flex-basis: 1 1 300px;
+      outline: 1px solid white;
+      padding: 20px;
     }
   }
 </style>

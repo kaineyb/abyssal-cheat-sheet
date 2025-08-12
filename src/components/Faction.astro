@@ -16,9 +16,12 @@ const { faction } = Astro.props;
   <div class="icon-group">
     {faction.types.map((type) => <Icon icon={type} />)}
   </div>
-  <p><Prefixes prefixes={faction.prefixes} /></p>
-  <p><Ships ships={faction.ships} /></p>
-  <p>{faction.notes}</p>
+  <div class="faction-details">
+    {faction.prefixes.length > 0 && <Prefixes prefixes={faction.prefixes} />}
+    <Ships ships={faction.ships} />
+  </div>
+
+  <p class="notes">{faction.notes}</p>
 </div>
 
 <style scoped>
@@ -31,5 +34,27 @@ const { faction } = Astro.props;
     display: flex;
     flex-wrap: wrap;
     gap: 0px;
+  }
+
+  .faction-details {
+    /* border: 1px solid salmon; */
+    display: flex;
+    flex-direction: row;
+    /* gap: 10px; */
+    justify-content: space-between;
+
+    > div {
+      /* border: 1px solid blue; */
+    }
+    ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+  }
+
+  .notes {
+    width: 350px;
+    text-wrap: wrap;
   }
 </style>

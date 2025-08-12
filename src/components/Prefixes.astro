@@ -10,7 +10,6 @@ const { prefixes } = Astro.props;
 ---
 
 <div id="container">
-  <h2>Prefixes</h2>
   <ul class="prefixes">
     {
       prefixes.map((prefix) => (
@@ -27,4 +26,9 @@ const { prefixes } = Astro.props;
   </ul>
 </div>
 
-<style></style>
+<style>
+  .faction-type {
+    position: relative;
+    top: 8px;
+  }
+</style>
